@@ -1,5 +1,6 @@
 from sympy import *
 
+init_printing()
 a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z = symbols('a b c d e f g h i j k l m n o p q r s t u v w x y z')
 
 print("Welcome to my algebra calculator!")
@@ -13,7 +14,8 @@ while True:
     print("5. Find the roots of a function")
     print("6. Solve a system of equations")
     print("7. Find the value of a function at an x value")
-    print("8. Quit")
+    print("8. Rationalize the denominator")
+    print("9. Quit")
 
     user = int(input("Enter your choice: "))
     if user == 1:
@@ -34,7 +36,8 @@ while True:
         print()
         input2 = input("Enter the function: ")
         input2 = parse_expr(input2)
-        pprint(integrate(input2), use_unicode=True)
+        input3 = input("Enter the variable: ")
+        pprint((Integral(input2),x), use_unicode=True)
     if user == 4:
         print()
         input2 = input("Enter the function: ")
@@ -69,5 +72,12 @@ while True:
         value = input("Enter the value of x: ")
         pprint(input2.subs(x,value), use_unicode=True)
     if user == 8:
+        print()
+        input2 = input("Enter the numerator: ")
+        input2 = parse_expr(input2)
+        input3 = input("Enter the denominator (use sqrt() for square root): ")
+        input3 = parse_expr(input3)
+        pprint(simplify(input2/input3), use_unicode=True)
+    if user == 9:
         print("Goodbye!")
         break
