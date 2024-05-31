@@ -117,7 +117,7 @@ while True:
                 pprint(answer)
     if user == 12:
         print()
-        print("You can use >, >=, <, <=, and !=.")
+        print("You can use >, >=, <, and <=.")
         input2 = input("Enter the inequality: ")
         input2 = parse_expr(input2)
         input3 = input("Enter the variable: ")
