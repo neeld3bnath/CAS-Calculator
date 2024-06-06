@@ -44,7 +44,7 @@ while True:
         function = input("Enter the function: ")
         function = parse_expr(function)
         symbol = input("Enter the variable: ")
-        pprint((Integral(function),symbol))
+        pprint((integrate(function),symbol))
     if user == 4:
         print()
         func = input("Enter the function: ")
