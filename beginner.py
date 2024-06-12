@@ -132,7 +132,11 @@ class AlgebraCalculator:
         print()
         expression = input("Enter the expression: ")
         expression = parse_expr(expression)
-        pprint(simplify(expression))
+        answer = simplify(expression)
+        if answer.equals("zoo"):
+            print("Value is undefined.")
+        else:
+            pprint(answer)
 
     def quit_program(self):
         print("Goodbye!")
