@@ -138,10 +138,11 @@ class AlgebraCalculator:
         print("Goodbye!")
 
 calculator = AlgebraCalculator()
+print("Welcome to my algebra calculator!")
 while True:
     init_printing()
     a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z = symbols('a b c d e f g h i j k l m n o p q r s t u v w x y z')
-    print("Welcome to my algebra calculator!")
+    print()
     print("What do you want to do?")
     print("1. Solve for a variable in an equation")
     print("2. Find the derivative of a function")
