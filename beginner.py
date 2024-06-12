@@ -2,6 +2,7 @@ from sympy import *
 
 class AlgebraCalculator:
     def solve_equation(self):
+        print()
         firsthalf = input("Enter the first part of the equation (before the equals sign): ")
         firsthalf = parse_expr(firsthalf)
         secondhalf = input("Enter the second part of the equation (after the equals sign): ")
